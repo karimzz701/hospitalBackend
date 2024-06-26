@@ -84,6 +84,11 @@ app.all("*", (req, res, next) => {
 // GLOBAL ERROR HANDLING MIDDLEWARE
 app.use(globalError);
 
+app.get("/test" , (req ,res)=>{
+    res.json({msg : 'Hello KArimzzz from Server'})
+})
+
+
 // Start the server and store the result in a variable
 const port = 8080 || process.env.PORT;
 const server = app.listen(port, () => {
